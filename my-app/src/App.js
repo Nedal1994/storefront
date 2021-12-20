@@ -1,18 +1,44 @@
-import Catogries from "./compononts/Categories";
-import Footer from "./compononts/Footer";
-import Header from "./compononts/Header";
-import Product from "./compononts/Product";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import "./App.css";
 
+import { connect } from "react-redux";
 
-function App() {
+import Navbar from "./components/Navbar/Navbar";
+import Products from "./components/Products/Products";
+import Cart from "./components/Cart/Cart";
+import SingleItem from "./components/SingleItem/SingleItem";
+import Footer from "./components/Footer";
+
+function App({ current }) {
   return (
-    <div className="App">
-       <Header />
-      <Catogries />
-      < Product />
-      <Footer />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Products} />
+          <Route exact path="/cart" component={Cart} />
+          {!current ? (
+            <Redirect to="/" />
+          ) : (
+            <Route exact path="/product/:id" component={SingleItem} />
+          )}
+        </Switch>
+      </div>
+      <Footer/>
+    </Router>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    current: state.shop.currentItem,
+  };
+};
+
+export default connect(mapStateToProps)(App);
