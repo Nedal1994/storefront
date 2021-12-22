@@ -1,16 +1,45 @@
-:root {
-  --primary-color: #000000;
-  --secondary-color: #333333;
-  --light-color: #eeeeee;
-  --dark-color: #000000;
+.jss12 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-* {
+.simple-cart {
+  font-size: 1.25rem;
+  position: fixed;
+  top: 5.5rem;
+  right: 1rem;
+  width: 200px;
+}
+.simple-cart ul {
+  background: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  list-style-type: none;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 1rem;
+}
+.simple-cart li {
+ font-size: small;
 }
 
-body {
-  font-family: Helvetica;
-}
+
+.jss66 {
+  padding: 64px 0px 48px;
+  background-color: rgb(230, 220, 220);
+  position: relative;
+
+
+  }
+  .jss66 h2{
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .container1{
+    position: absolute;
+    top: 17.5rem;
+    right: 41rem;
+    width: 500;
+    background-color: rgb(219, 209, 209);
+  }
