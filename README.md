@@ -16,4 +16,4 @@ In the project directory, you can run:
 
 ### Deployment
 - netlify:  
-- pull request: 
+- pull request: https://github.com/Nedal1994/storefront/pull/4
