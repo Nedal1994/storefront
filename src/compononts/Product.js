@@ -10,7 +10,6 @@ import {
 
 import { useDispatch, useSelector } from "react-redux";
 import { get, updateStock, deleteItem,added } from "../store/actions/action";
-import './Product.scss'
 
 
 export default function Product() {

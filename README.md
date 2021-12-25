@@ -11,7 +11,7 @@ In the project directory, you can run:
 ### `npm test`
 
 
-## UML : ![img](UML Diagram.png)
+## UML : ![img](UML-Diagram.png)
 
 
 ### Deployment
